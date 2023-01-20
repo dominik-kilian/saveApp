@@ -1,14 +1,28 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Items</h1>
+<h1>Save App - save here something you want</h1>
 
-<div id="items">
-  <% @items.each do |item| %>
-    <%= render item %>
-    <p>
-      <%= link_to "Show this item", item %>
-    </p>
-  <% end %>
+<div id="items" class="container-fluid mb-3">
+  <table class="table">
+    <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Link</th>
+          <th></th>
+        </tr>
+    </thead>
+<tbody>
+    <% @items.each do |item| %>
+    <tr>
+      <td><%= item.name %></td>
+      <td><%= item.description %></td>
+      <td>Link</td>
+      <td><%= link_to "Show this save", item, class: 'btn btn-dark'%></td>
+    </tr>
+    <% end %>
+</tbody>
+  </table>
 </div>
 
-<%= link_to "New item", new_item_path %>
+<%= link_to "New save", new_item_path, class: 'btn btn-primary' %>
