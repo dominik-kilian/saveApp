@@ -1,12 +1,13 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Save App - save here something you want</h1>
+<h1>Save App - save anything you want</h1>
 
 <div id="items" class="container-fluid mb-3">
   <table class="table">
     <thead>
         <tr>
           <th>Name</th>
+          <th>Type</th>
           <th>Description</th>
           <th>Link</th>
           <th></th>
@@ -16,8 +17,9 @@
     <% @items.each do |item| %>
     <tr>
       <td><%= item.name %></td>
+      <td><%= item.type_of %></td>
       <td><%= item.description %></td>
-      <td><%= item.link_to%></td>
+      <td class="btn btn-outline-warning"><a href="<%= item.link_to %>" target="_blank" ><%= item.link_to %></a></td>
       <td><%= link_to "Show this save", item, class: 'btn btn-dark'%></td>
     </tr>
     <% end %>

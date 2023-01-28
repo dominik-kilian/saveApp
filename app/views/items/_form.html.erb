@@ -17,6 +17,11 @@
   </div>
 
   <div>
+    <%= form.label :type_of, class: 'form-label' %>
+    <%= form.select :type_of, Item.type_ofs.keys, {include_blank: 'Select type... (Default: Other) '}, class: 'form-select' %>
+  </div>
+
+  <div>
     <%= form.label :description, class: 'form-label' %>
     <%= form.text_field :description, class: 'form-control mb-3'  %>
   </div>

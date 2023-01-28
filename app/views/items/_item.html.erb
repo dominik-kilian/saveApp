@@ -5,13 +5,18 @@
   </p>
 
   <p>
+    <strong>Type:</strong>
+    <%= item.type_of %>
+  </p>
+
+  <p>
     <strong>Description:</strong>
     <%= item.description %>
   </p>
 
   <p>
     <strong>Link:</strong>
-    <%= item.link_to%>
+    <a href="<%= item.link_to%>" ><%= item.link_to%></a>
   </p>
 
 </div>
