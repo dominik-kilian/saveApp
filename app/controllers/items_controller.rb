@@ -55,24 +55,24 @@ class ItemsController < ApplicationController
     end
     end
 
-  def tiktok_type
-    @items = Item.where(type_of: 0)
+  def tiktok
+    @items = Item.tiktok
   end
 
-  def youtube_type
-    @items = Item.where(type_of: 1)
+  def youtube
+    @items = Item.youtube
   end
 
   def movie_type
-    @items = Item.where(type_of: 2)
+    @items = Item.movie
   end
 
   def clothes_type
-    @items = Item.where(type_of: 3)
+    @items = Item.clothes
   end
 
   def other_type
-    @items = Item.where(type_of: 4)
+    @items = Item.other
   end
 
 
