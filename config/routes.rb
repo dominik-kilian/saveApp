@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   root 'items#index'
-  resources :items
+  resources :items do
+    collection do
+      get :tiktok_type
+    end
+  end
 
 end

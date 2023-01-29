@@ -18,8 +18,6 @@ class ItemsController < ApplicationController
   # GET /items/1/edit
   def edit
   end
-
-  # POST /items or /items.json
   def create
     @item = Item.new(item_params)
 
@@ -57,6 +55,25 @@ class ItemsController < ApplicationController
     end
   end
 
+  def tiktok_type
+    @items = Item.where(type_of: 0)
+  end
+
+  def youtube_type
+
+  end
+
+  def movie_type
+
+  end
+
+  def clothes_type
+
+  end
+
+  def other_type
+
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_item

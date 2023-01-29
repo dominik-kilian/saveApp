@@ -1,0 +1,30 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Save App - save anything you want</h1>
+
+<div id="items" class="container-fluid mb-3">
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th>Link</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @items.each do |item| %>
+      <tr>
+        <td><%= item.name %></td>
+        <td><%= item.type_of %></td>
+        <td><%= item.description %></td>
+        <td><a href="<%= item.link_to %>" target="_blank" ><%= item.link_to %></a></td>
+        <td><%= link_to "Show this save", item, class: 'btn btn-dark'%></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+
+<%= link_to "New save", new_item_path, class: 'btn btn-primary' %>
