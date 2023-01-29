@@ -53,27 +53,29 @@ class ItemsController < ApplicationController
       format.html { redirect_to items_url, notice: "Item was successfully destroyed." }
       format.json { head :no_content }
     end
-  end
+    end
 
   def tiktok_type
     @items = Item.where(type_of: 0)
   end
 
   def youtube_type
-
+    @items = Item.where(type_of: 1)
   end
 
   def movie_type
-
+    @items = Item.where(type_of: 2)
   end
 
   def clothes_type
-
+    @items = Item.where(type_of: 3)
   end
 
   def other_type
-
+    @items = Item.where(type_of: 4)
   end
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_item
